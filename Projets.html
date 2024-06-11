@@ -1,176 +1,141 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>VIVARAT Ferras</h1>
-            <nav>
-                <a href="index.html">Accueil</a>
-                <a href="a_propos.html">À propos</a>
-                <a href="Projets.html" class="active">Projets</a>
-            </nav>
+          <h1>VIVARAT Ferras</h1>
+          <nav>
+            <a href="index.html" >Accueil</a>
+            <a href="a_propos.html">À propos</a>
+            <a href="Projets.html" class="active">Projets</a>
+          </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <div class="intro">
-                <h2>Mes Projets</h2>
-                <nav class="category-nav">
-                    <button class="category-button" onclick="showCategory('year1')">1ère année</button>
-                    <button class="category-button" onclick="showCategory('year2')">2ème année</button>
-                    <button class="category-button" onclick="showCategory('personal')">Personnel</button>
-                </nav>
-                <p>Voici mes projets qui touchent l'informatique</p>
+          <div class="intro">
+            <h2>Mes Projets</h2>
+            <p>Voici mes projets qui touchent l'informatique</p>
+          </div>
+          <div class="category-nav">
+            <button class="category-button" onclick="showCategory('year1')">1ère Année</button>
+            <button class="category-button" onclick="showCategory('year2')">2ème Année</button>
+            <button class="category-button" onclick="showCategory('personal')">Personnel</button>
+          </div>
+          <div class="projects" id="year1">
+            <div class="project">
+              <h4>SAE1.01</h4>
+              <img src="media/project1.png" alt="Capture d'écran du projet 1">
+              <p>Implémentation d'un besoin client</p>
+              <button class="open-button" onclick="openProjet('popup12')">Besoin de plus d'info ?</button>
+            </div>
+            <div class="popupG" id="popup12">
+              <p>Pour ce projet d'initiation au développement, nous devions créer une application en Java et rédiger un compte rendu en anglais. Cette application devait trier des dépêches dans plusieurs catégories.</p>
+              <p>Nous développions en binôme ce projet :<br>
+              <br>Je m’occupais de l’implémentation pour faire un algorithme de tri et faire une IA pour générer les paramètres de l’algorithme.  
+              <br><br> Mon binôme lui s’occupait de la comparaison des approches qui consiste à améliorer le temps de calcul de l’algorithme.</p>
+              <p>Ce projet m’a permis d’avoir un avant-goût du monde professionnel car nous avions une contrainte à réaliser et une Dead-line. Il m’a aussi permis de me focaliser sur la rédaction d’un carnet de bord pour préparer l’oral de présentation pour les clients. J’ai aussi acquis des compétences comme implémenter et élaborer des conceptions, analyser un problème avec méthode, comparer des algorithmes.</p>
+              <button class="close-button" onclick="closeProjet('popup12')">Fermer</button>
             </div>
 
-            <!-- Section 1ère année -->
-            <div class="projects" id="year1">
-                <h3>1ère année</h3>
-                <div class="project">
-                    <h4>SAE1.01</h4>
-                    <img src="media/project1.png" alt="Capture d'écran du projet 1">
-                    <p>Implémentation d'un besoin client</p>
-                    <button class="open-button" onclick="openprojet12()">besoin de plus d'info ?</button>
-                </div>
-                <div class="popupG" id="popup12">
-                    <p> Pour ce projet d'initiation au développement nous devions créer une application en java et rédiger un compte rendu en anglais, Cette application devait trier des dépêches dans plusieurs catégories  </p>
-                    <p>Nous développions en binôme ce projet : <br>
-                        <br>Je m’occupais de l’implémentation pour faire un algorithme de tri et faire une IA pour générer les paramètres de l’algorithme  
-                        <br><br> Mon binôme lui s’occupait de la comparaison des approches qui consiste à améliorer le temps de calcul de l’algorithme</p>
-                    <p>Ce projet m’a permis d’avoir un avant-goût du monde professionnel car nous avions une contrainte à réaliser et une Dead-line. Il m’a aussi permis de me focaliser sur la rédaction d’un carnet de bord pour permettre de préparer l’oral de présentation pour les clients. J’ai aussi acquis des compétences comme Implémenter et élaborer des conceptions, Analyser un problème avec méthode, comparer des algorithmes. </p>
-                    <button class="close-button" onclick="closeprojet12()">fermer</button>
-                </div>
-
-                <div class="project">
-                    <h4>SAE1.02</h4>
-                    <img src="media/project2.png" alt="Capture d'écran du projet 2">
-                    <p>Comparaison d'approches algorithmiques</p>
-                    <button class="open-button" onclick="openprojet2()">besoin de plus d'info ?</button>
-                </div>
-                <div class="popupG" id="popup2">
-                    <p>Pour ce projet, nous avons comparé différentes approches algorithmiques pour résoudre un problème spécifique. J'ai travaillé sur la mise en œuvre de plusieurs algorithmes et leur comparaison en termes de complexité et de performances.</p>
-                    <button class="close-button" onclick="closeprojet2()">fermer</button>
-                </div>
-
-                <div class="project">
-                    <h4>SAE1.03</h4>
-                    <img src="media/project3.png" alt="Capture d'écran du projet 3">
-                    <p>Installation d'un poste pour le développement</p>
-                    <button class="open-button" onclick="openprojet3()">besoin de plus d'info ?</button>
-                </div>
-                <div class="popupG" id="popup3">
-                    <p>Pour ce projet d’installation d'un poste pour le développement, je devais créer un poste de travail Debian sur Linux sur une VM (Machine Virtuelle). Le but à la fin de ce projet est d’installer et configurer la VM (et d’installer des packages).</p>
-                    <p>Le procédé de ce projet était :<br> 
-                        <br>Installer l’image iso de Debian (et vérifier l’installation) 
-                        <br>Créer une vm avec cette image 
-                        <br>Installer Debian sur la vm et le configurer 
-                        <br>Installer des logiciels et des packages </p>
-                    <p>Ce projet m’a permis d'identifier les différents composants (matériel et logiciels) d’un système numérique, d’utiliser les fonctionnalités de base d’un système multitâches / multiutilisateurs et d’installer et configurer un système d’exploitation et des outils de développement. </p>
-                    <button class="close-button" onclick="closeprojet3()">fermer</button>
-                </div>
-
-                <div class="project">
-                    <h4>SAE1.04</h4>
-                    <img src="media/project4.png" alt="Capture d'écran du projet 4">
-                    <p>Création d'une base de données</p>
-                    <button class="open-button" onclick="openprojet4()">besoin de plus d'info ?</button>
-                </div>
-                <div class="popupG" id="popup4">
-                    <p> Pour ce projet, le but était de créer une base de données et d'utiliser cette base de données pour différentes opérations.</p>
-                    <p>Nous travaillions en binôme :<br>
-                        <br>Je m’occupais de la partie création et gestion de la base de données 
-                        <br>Mon binôme s’occupait de la partie traitement et analyse des données </p>
-                    <p>Grâce à ce projet, j’ai acquis plusieurs compétences comme la création de tables SQL, le remplissage de la base de données et la gestion des opérations sur les données. </p>
-                    <button class="close-button" onclick="closeprojet4()">fermer</button>
-                </div>
-
-                <div class="project">
-                    <h4>SAE1.05</h4>
-                    <img src="media/project5.png" alt="Capture d'écran du projet 5">
-                    <p>Recueil de besoins</p>
-                    <button class="open-button" onclick="openprojet5()">besoin de plus d'info ?</button>
-                </div>
-                <div class="popupG" id="popup5">
-                    <p>Ce projet avait pour but de créer un site web pour une entreprise, compréhensible pour des élèves de 3ème.</p>
-                    <p>Lors de ce projet, nous étions 4 et chacun devait chercher, trier, traiter les informations trouvées pour les mettre sur le site web créé en groupe et faire une présentation orale au client. </p>
-                    <p>Grâce à ce projet, j’ai acquis plusieurs compétences comme l'utilisation du langage d’entreprise et sa simplification, ainsi que la collaboration en équipe pour créer un site web. Ce fut mon premier gros projet avec une équipe de plus de deux personnes.</p>
-                    <button class="close-button" onclick="closeprojet5()">fermer</button>
-                </div>
+            <div class="project">
+              <h4>SAE1.02</h4>
+              <img src="media/project2.png" alt="Capture d'écran du projet 2">
+              <p>Comparaison d'approches algorithmiques</p>
+              <button class="open-button" onclick="openProjet('popup13')">Besoin de plus d'info ?</button>
+            </div>
+            <div class="popupG" id="popup13">
+              <p>Pour ce projet, nous avons comparé différentes approches algorithmiques pour résoudre un problème spécifique.</p>
+              <button class="close-button" onclick="closeProjet('popup13')">Fermer</button>
             </div>
 
-            <!-- Section 2ème année -->
-            <div class="projects" id="year2" style="display: none;">
-                <h3>2ème année</h3>
-                <!-- Ajoutez vos projets de 2ème année ici -->
+            <div class="project">
+              <h4>SAE1.03</h4>
+              <img src="media/project3.png" alt="Capture d'écran du projet 3">
+              <p>Installation d'un poste pour le développement</p>
+              <button class="open-button" onclick="openProjet('popup3')">Besoin de plus d'info ?</button>
+            </div>
+            <div class="popupG" id="popup3">
+              <p>Pour ce projet, nous devions créer un poste de travail Debian sur Linux sur une VM (Machine Virtuelle).</p>
+              <button class="close-button" onclick="closeProjet('popup3')">Fermer</button>
             </div>
 
-            <!-- Section Personnel -->
-            <div class="projects" id="personal" style="display: none;">
-                <h3>Personnel</h3>
-                <!-- Ajoutez vos projets personnels ici -->
+            <div class="project">
+              <h4>SAE1.04</h4>
+              <img src="media/project4.png" alt="Capture d'écran du projet 4">
+              <p>Création d'une base de données</p>
+              <button class="open-button" onclick="openProjet('popup4')">Besoin de plus d'info ?</button>
             </div>
+            <div class="popupG" id="popup4">
+              <p>Pour ce projet, nous avons créé une base de données et appris à l'utiliser efficacement.</p>
+              <button class="close-button" onclick="closeProjet('popup4')">Fermer</button>
+            </div>
+
+            <div class="project">
+              <h4>SAE1.05</h4>
+              <img src="media/project5.png" alt="Capture d'écran du projet 5">
+              <p>Recueil de besoins</p>
+              <button class="open-button" onclick="openProjet('popup5')">Besoin de plus d'info ?</button>
+            </div>
+            <div class="popupG" id="popup5">
+              <p>Pour ce projet, nous avons créé un site web pour une entreprise compréhensible pour des élèves de 3ème.</p>
+              <button class="close-button" onclick="closeProjet('popup5')">Fermer</button>
+            </div>
+
+            <div class="project">
+              <h4>SAE1.06</h4>
+              <img src="media/project6.png" alt="Capture d'écran du projet 6">
+              <p>Découverte de l'environnement économique et écologique</p>
+              <button class="open-button" onclick="openProjet('popup6')">Besoin de plus d'info ?</button>
+            </div>
+            <div class="popupG" id="popup6">
+              <p>Pour ce projet, nous avons exploré l'environnement économique et écologique lié à notre domaine.</p>
+              <button class="close-button" onclick="closeProjet('popup6')">Fermer</button>
+            </div>
+          </div>
+          <div class="projects" id="year2">
+            <!-- Projets de 2ème année ici -->
+          </div>
+          <div class="projects" id="personal">
+            <!-- Projets personnels ici -->
+          </div>
         </div>
     </main>
     <footer>
         <div class="container">
-            <p>Copyright &copy; 2023 Vivarat Ferras</p>
+            <p>Copyright &copy; 2024 Vivarat Ferras</p>
         </div>
     </footer>
 
     <script>
-        function showCategory(category) {
-            document.getElementById('year1').style.display = 'none';
-            document.getElementById('year2').style.display = 'none';
-            document.getElementById('personal').style.display = 'none';
+      function showCategory(category) {
+        document.querySelectorAll('.projects').forEach(function (section) {
+          section.style.display = 'none';
+        });
+        document.getElementById(category).style.display = 'flex';
 
-            document.getElementById(category).style.display = 'block';
-        }
+        document.querySelectorAll('.category-button').forEach(function (button) {
+          button.style.display = 'inline-block';
+        });
+        document.querySelector('[onclick="showCategory(\'' + category + '\')"]').style.display = 'none';
+      }
 
-        function openprojet12() {
-            document.getElementById("popup12").style.visibility = "visible";
-        }
+      function openProjet(popupId) {
+        document.getElementById(popupId).style.visibility = 'visible';
+      }
 
-        function closeprojet12() {
-            document.getElementById("popup12").style.visibility = "hidden";
-        }
+      function closeProjet(popupId) {
+        document.getElementById(popupId).style.visibility = 'hidden';
+      }
 
-        function openprojet2() {
-            document.getElementById("popup2").style.visibility = "visible";
-        }
-
-        function closeprojet2() {
-            document.getElementById("popup2").style.visibility = "hidden";
-        }
-
-        function openprojet3() {
-            document.getElementById("popup3").style.visibility = "visible";
-        }
-
-        function closeprojet3() {
-            document.getElementById("popup3").style.visibility = "hidden";
-        }
-
-        function openprojet4() {
-            document.getElementById("popup4").style.visibility = "visible";
-        }
-
-        function closeprojet4() {
-            document.getElementById("popup4").style.visibility = "hidden";
-        }
-
-        function openprojet5() {
-            document.getElementById("popup5").style.visibility = "visible";
-        }
-
-        function closeprojet5() {
-            document.getElementById("popup5").style.visibility = "hidden";
-        }
+      // Show the first category by default
+      document.addEventListener("DOMContentLoaded", function() {
+        showCategory('year1');
+      });
     </script>
 </body>
 </html>
