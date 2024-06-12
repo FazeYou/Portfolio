@@ -8,8 +8,13 @@ h1, h2, h3, h4 {
   color: #333;
 }
 
-h1 {
-  padding-top: 18px;
+h2 {
+  margin-top: 0px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
 p {
@@ -29,12 +34,8 @@ a:hover {
 
 header {
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
 }
 
 header .container {
@@ -64,7 +65,6 @@ main {
 
 figure{
   float:right;
-  width: 35%;
   margin-left: 0;
   display: flex;
   flex-direction: row-reverse;
@@ -79,8 +79,6 @@ figure{
   width: auto;
   height: 200px;
 }
-
-
 
 main .container {
   max-width: 1100px;
@@ -110,7 +108,6 @@ main .container {
 
 .project h4 {
   margin: 0;
-
 }
 
 .projecta img {
@@ -155,10 +152,11 @@ div.project{
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
   text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }
 
 footer .container {
@@ -188,42 +186,57 @@ footer p {
   padding: 10px;
 }
 
-
 .category-nav {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .category-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 0 10px;
+  background-color: #007bff;
   color: white;
-  background-color: #4CAF50;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
+  border: none;
+  padding: 10px 20px;
   cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .category-button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
-.open-button, .close-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 10px;
+.category-button.active {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.open-button {
+  background-color: #007bff;
   color: white;
-  background-color: #4CAF50;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
+  border: none;
+  padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.open-button:hover, .close-button:hover {
-  background-color: #45a049;
+.open-button:hover {
+  background-color: #0056b3;
+}
+
+.close-button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.close-button:hover {
+  background-color: #cc0000;
 }
 
 .projects {
