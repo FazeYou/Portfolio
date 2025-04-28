@@ -1,54 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Mon Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Ferras VIVARAT</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container">
-      <h1>VIVARAT Ferras</h1>
       <nav>
-        <a href="index.html" class="active">Accueil</a>
-        <a href="a_propos.html">À propos</a>
-        <a href="Projets.html">Projets</a>
+        <div class="logo">Ferras VIVARAT</div>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
-  <main>
+
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <div class="intro">
-        <figure class="pres">
-          <img class="pp" src="media/Ferras.png" alt="Photo de profil">
-          <ul>
-            <li>&#128100; Étudiant BUT informatique</li>
-            <li>&#128205; IUT2 Place Doyen Gosse</li>
-            <li>&#9993; ferrasvm@gmail.com</li>
-          </ul>
-        </figure>
-        <h2>Bienvenue sur mon site web</h2>
-        <p>Je suis un développeur et ce site web est un espace pour partager mes projets et mes pensées sur le développement. Actuellement je suis étudiant à l'IUT 2 de Grenoble pour faire mon BUT informatique que j'ai commencé en 2022 pour finir en 2025. Après mon BUT je ferais un master en Cyber Securité. </p>
-        <h2>Mes langage de programmation</h2>
-        <ul class="list">
-            <li><img class="program" src="media/Java_Logo.png" alt="Java"></li>
-            <li><img class="program" src="media/html_Logo.png" alt="html"></li>
-            <li><img class="program" src="media/css_Logo.png" alt="css"></li>
-            <li><img class="program" src="media/js_Logo.png" alt="js"></li>
-        </ul>
-        <ul  class="list">
-          <li><img class="program" src="media/project4.png" alt="SQL"></li>
-          <li><img class="program" src="media/php_Logo.png" alt="php"></li>
-          <li><img class="program" src="media/c++_Logo.png" alt="c++"></li>
-          <li><img class="program" src="media/c_Logo.png" alt="c"></li>
-        </ul>
+        <img class="profile-pic" src="profile-pic.png" alt="profile-pic">
+      <h1>Ferras VIVARAT</h1>
+      <p>Administrateur Systèmes & Réseaux</p>
+      <a href="#projects" class="btn">Mes Projets</a>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>À propos de moi</h2>
+      <p>Récemment diplômé d'un Bachelor Universitaire de Technologie (BUT) en Informatique à l'Université Grenoble Alpes, j'ai acquis une expérience en alternance chez Evos Infogérance où j'ai administré serveurs, bases de données et réseaux d'entreprise, tout en développant des scripts d'automatisation. Rigoureux, curieux et autonome, je suis prêt à apporter mes compétences en déploiement, sécurisation et optimisation d'infrastructures.</p>
+      <h2></h2>
+      <h2>Technologies & outils maîtrisés</h2>
+      <ul>
+        <li><p><b>Systèmes d’exploitation : </b>Windows et Linux</p></li>
+        <li><p><b>Services d'infrastructure : </b>Apache, Nginx, BIND9 , DHCP, Samba, OpenSSH, Fail2ban, UFW</p></li>
+        <li><p><b>Virtualisation & conteneurisation : </b>VMware , Hyper-V, VirtualBox, Docker (bases de Kubernetes)</p></li>
+        <li><p><b>Automatisation & scripting : </b>Bash, PowerShell, Python, VBscript</p></li>
+        <li><p><b>Bases de données : </b>MySQL, PostgreSQL, MariaDB</p></li>
+        <li><p><b>Réseaux & sécurité : </b>TCP/IP, VLAN, routage, VPN (OpenVPN, IPsec), pare-feux</p></li>
+        <li><p><b>Supervision & monitoring : </b>Nagios, Zabbix (configuration, création d’alertes, tableaux de bord)</p></li>
+        <li><p><b>Sauvegarde & reprise d’activité : </b>Acronis, veeam</p></li>
+        <li><p><b>Développement & programmation : </b>C, C++, Java, Python, Rust</p></li>
+        <li><p><b>Développement web : </b>HTML, CSS, JavaScript, PHP</p></li>
+        <li><p><b>Outils de développement et CI/CD : </b>Git, GitLab, GitLab CI/CD, Notions de pipelines</p></li>
+        <li><p><b>Méthodologies IT : </b>ITIL (gestion des incidents et des changements), ticketing , documentation</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projets</h2>
+      <div class="cards">
+        <div class="card" data-title="Installation d'un serveur Apache" data-desc="Création d’un serveur Apache sur machine virtuelle, configuration HTTPS et sécurisation par pare-feu." data-tech="Apache, Linux, Virtualisation">
+          <h3>Installation Apache</h3>
+          <p>Création et sécurisation d’un serveur web.</p>
+        </div>
+        <div class="card" data-title="Réseau d'entreprise fictive" data-desc="Conception et déploiement d’un réseau multi-sites avec VLANs, DHCP et surveillance basique." data-tech="Switch, VLAN, DHCP">
+          <h3>Réseau fictif</h3>
+          <p>Mise en place d'un réseau segmenté.</p>
+        </div>
+        <div class="card" data-title="Exploitation de base PostgreSQL" data-desc="Nettoyage, transformation et reporting de données via PostgreSQL et RStudio pour analyse des résultats." data-tech="PostgreSQL, RStudio">
+          <h3>Analyse PostgreSQL</h3>
+          <p>Traitement et rapport de données.</p>
+        </div>
+        <div class="card" data-title="Serious Game déployé" data-desc="Développement d’un serious game en Java et déploiement sur le réseau de l'IUT pour formation interactive." data-tech="Java, Réseau">
+          <h3>Serious Game</h3>
+          <p>Développement et déploiement pédagogique.</p>
+        </div>
       </div>
     </div>
-  </main>
-  <footer>
-    <div class="container">
-      <p>Copyright &copy; 2024 Vivarat Ferras</p>
+  </section>
+
+  <!-- Modal Détails -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+      <button class="close-btn" onclick="toggleModal(false)">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <p><strong>Technologies :</strong> <span id="modalTech"></span></p>
     </div>
-  </footer>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message"></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+      <div class="contact-details">
+        <p>Email : <a href="mailto:ferrasvm@gmail.com">ferrasvm@gmail.com</a></p>
+        <p>Téléphone : 06 61 93 36 48</p>
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/ferras-vivarat-469436279/">Ferras VIVARAT</a></p>
+        <p>GitHub : <a href="https://github.com/FazeYou">github.com/FazeYou</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script pour le modal -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const overlay = document.getElementById('modalOverlay');
+    const titleEl = document.getElementById('modalTitle');
+    const descEl = document.getElementById('modalDesc');
+    const techEl = document.getElementById('modalTech');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        titleEl.textContent = card.dataset.title;
+        descEl.textContent = card.dataset.desc;
+        techEl.textContent = card.dataset.tech;
+        toggleModal(true);
+      });
+    });
+
+    function toggleModal(show) {
+      overlay.style.display = show ? 'flex' : 'none';
+    }
+  </script>
 </body>
 </html>
-
