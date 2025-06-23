@@ -244,16 +244,38 @@ section {
 .modal {
     background: var(--white);
     color: var(--dark);
-    max-width: 600px;
+    max-width: 700px; /* un peu plus large pour le confort */
     width: 90%;
-    padding: 2rem;
-    border-radius: 8px;
+    padding: 2.5rem;
+    border-radius: 10px;
     position: relative;
+    line-height: 1.8; /* augmentation pour meilleure lecture */
+    font-size: 1rem;   /* taille de texte légèrement augmentée */
 }
 
 .modal h3 {
     margin-top: 0;
 }
+
+.modal p + p {
+    margin-top: 1rem;
+}
+
+.modal .tech-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.modal .tech-list span {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.3rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
 
 .modal .close-btn {
     position: absolute;
