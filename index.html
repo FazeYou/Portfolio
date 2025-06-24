@@ -13,7 +13,7 @@
       <nav>
         <div class="logo">Ferras VIVARAT</div>
         <ul>
-          <li><a href="#">Accueil</a></li>
+          <li><a href="#hero">Accueil</a></li>
           <li><a href="#about">À propos</a></li>
           <li><a href="#projects">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -23,7 +23,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="container">
         <img class="profile-pic" src="profile-pic.png" alt="profile-pic">
       <h1>Ferras VIVARAT</h1>
@@ -129,26 +129,60 @@
     </div>
   </section>
 
-  <!-- Script pour le modal -->
   <script>
-    const cards = document.querySelectorAll('.card');
-    const overlay = document.getElementById('modalOverlay');
-    const titleEl = document.getElementById('modalTitle');
-    const descEl = document.getElementById('modalDesc');
-    const techEl = document.getElementById('modalTech');
+  const cards = document.querySelectorAll('.card');
+  const overlay = document.getElementById('modalOverlay');
+  const titleEl = document.getElementById('modalTitle');
+  const descEl = document.getElementById('modalDesc');
+  const techEl = document.getElementById('modalTech');
 
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        titleEl.textContent = card.dataset.title;
-        descEl.textContent = card.dataset.desc;
-        techEl.textContent = card.dataset.tech;
-        toggleModal(true);
-      });
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      titleEl.textContent = card.dataset.title;
+      descEl.textContent = card.dataset.desc;
+      techEl.textContent = card.dataset.tech;
+      toggleModal(true);
     });
+  });
 
-    function toggleModal(show) {
-      overlay.style.display = show ? 'flex' : 'none';
+  function toggleModal(show) {
+    if (show) {
+      overlay.classList.add('show');
+    } else {
+      overlay.classList.remove('show');
     }
-  </script>
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '-40% 0px -50% 0px', 
+        threshold: 0
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
+  
 </body>
 </html>
