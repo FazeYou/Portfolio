@@ -20,8 +20,11 @@ body {
 }
 
 header {
-    background-color: var(--dark);
-    padding: 1rem;
+  background-color: var(--dark);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .container {
@@ -31,11 +34,11 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* supprime position ici s’il y en a */
 }
-
 nav .logo {
     font-size: 1.25rem;
     font-weight: bold;
@@ -103,7 +106,9 @@ nav ul li a:hover {
 
 section {
     padding: 3rem 0;
+    scroll-margin-top: 50px; /* ajuste à la hauteur de ton header */
 }
+
 
 .about {
     background-color: var(--dark);
