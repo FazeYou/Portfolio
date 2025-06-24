@@ -6,6 +6,16 @@
     --font: 'Segoe UI', sans-serif;
 }
 
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--white);
+}
+
 * {
     margin: 0;
     padding: 0;
